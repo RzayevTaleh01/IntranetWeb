@@ -1,0 +1,363 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #fbfbfb;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+}
+
+/* Header */
+
+header {
+    background-color: #2c3341;
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 13px 40px 6px 25px;
+}
+
+header .header-info {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+header .profile-data {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+header .header-info .profile-data .profile-img {
+    width: 48px;
+    height: 48px;
+}
+
+header .header-info .profile-data .profile-img img {
+    width: 100%;
+    border-radius: 6px;
+    box-shadow: 0 0 0 2px #fff;
+}
+
+header .header-info .profile-data .profile-info {
+    color: #ffff;
+    text-align: right;
+}
+
+header .header-info .profile-info h3 {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+header .header-info .profile-info p {
+    font-size: 12px;
+    font-weight: 400;
+}
+
+/* Navbar  */
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 100vh;
+    background-color: #f8f8f8;
+    position: fixed;
+    top: 0;
+}
+
+nav .nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+nav .nav-links .active{
+    position: relative;
+
+}
+nav .nav-links .active::before {
+    content: "";
+    background: url(../img/icon/Rectangle.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    height: 50px;
+    top: -15px;
+    width: 10px;
+    left: -23px;
+
+}
+
+/* Main */
+
+main {
+    padding-left: 100px;
+    padding-top: 120px;
+    margin-bottom: 20px;
+    width: 90%;
+}
+
+main .user-profile {
+    background-color: #fff;
+    box-shadow: 0px 8px 14px rgba(0, 0, 0, 0.03);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+main .user-profile h1 {
+    font-weight: 600;
+    color: #2c3341;
+}
+
+/* Main User Profile Header */
+
+main .user-profile-header {
+    padding-top: 20px;
+    padding-bottom: 40px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    border-bottom: 1px solid #EAEBEC;
+
+}
+
+main .user-profile-header .user-data {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+main .user-profile-header .user-data .user-data-col {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+main .user-profile-header .user-data .user-data-col h3 {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+main .user-profile-header .user-data .user-data-col p {
+    font-size: 14px;
+}
+
+/* Main User Profile Body */
+
+main .user-profile-body {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    width: 30%;
+}
+
+main .user-profile-body h1,
+main .user-profile-footer h1 {
+    padding-bottom: 20px;
+}
+
+main .user-profile-body form {
+    display: flex;
+    flex-direction: column;
+}
+
+main .user-profile-body form label {
+    margin-bottom: 5px;
+}
+
+main .user-profile-body form input[type="button"] {
+    padding: 14px 130px;
+    border-radius: 8px;
+    background: #2C3341;
+    color: #fff;
+    border: none;
+    margin-bottom: 20px;
+}
+
+main .user-profile-body form .form-submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    padding: 12px 20px;
+    width: 50%;
+    border-radius: 8px;
+    background-color: #5ABBB3;
+    font-weight: 600;
+    color: #ffff;
+    margin-top: 20px;
+    ;
+}
+
+
+
+/* Styles for Custom Select Box */
+
+main .user-profile-body .select-box {
+    display: flex;
+    flex-direction: column;
+}
+
+main .user-profile-body .select-box .options-container {
+    background: #F8F8F8;
+    color: #2C3341;
+    max-height: 0;
+    width: 100%;
+    opacity: 0;
+    transition: all 0.4s;
+    border-radius: 8px;
+    overflow: hidden;
+    order: 1;
+}
+
+main .user-profile-body .selected {
+    background: #F8F8F8;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    color: #2C3341;
+    position: relative;
+    order: 0;
+}
+
+main .user-profile-body .selected::after {
+    content: "";
+    background: url("../img/arrow-down.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    height: 100%;
+    width: 32px;
+    right: 10px;
+    top: 5px;
+    transition: all 0.4s;
+}
+
+main .user-profile-body .select-box .options-container.active {
+    max-height: 240px;
+    opacity: 1;
+    overflow-y: scroll;
+}
+
+main .user-profile-body .select-box .options-container.active+.selected::after {
+    transform: rotateX(180deg);
+    top: -6px;
+}
+
+main .user-profile-body .select-box .options-container::-webkit-scrollbar {
+    width: 8px;
+    background: #2C3341;
+    ;
+    border-radius: 0 8px 8px 0;
+}
+
+main .user-profile-body .select-box .options-container::-webkit-scrollbar-thumb {
+    background: #525861;
+    border-radius: 0 8px 8px 0;
+}
+
+main .user-profile-body .select-box .option,
+.selected {
+    padding: 12px 24px;
+    cursor: pointer;
+}
+
+main .user-profile-body .select-box .option:hover {
+    background: #E5E5E5;
+}
+
+main .user-profile-body .select-box label {
+    cursor: pointer;
+}
+
+main .user-profile-body .select-box .option .radio {
+    display: none;
+}
+
+/* Main User Profile Footer */
+
+.user-profile-footer {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    border-top: 1px solid #EAEBEC;
+}
+
+.user-profile-footer input {
+    width: 280px;
+    height: 48px;
+    background: #F8F8F8;
+    border: 1px solid #F5F5F5;
+    border-radius: 8px;
+    padding-left: 10px;
+}
+.user-profile-footer input:focus {
+    outline: none;
+}
+.user-profile-footer form {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+
+.user-profile-footer form .form-row,.user-profile-footer form .form-row  .input-fields {
+    display: flex;
+    gap: 30px;
+    align-items: flex-end;
+}
+
+.user-profile-footer form div button{
+    border-radius: 8px;
+    padding: 13px;
+    background-color:  #5ABBB3;
+}
+.user-profile-footer form .form-row .input-fields div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+.user-profile-footer form .form-row button:disabled{
+    background-color: #E6E6E6;
+    border: #E6E6E6;
+}
+
+/* Main Footer */
+
+footer {
+    background-color: #fff;
+    width: 100%;
+    border-radius: 6px;
+    box-shadow: 0px 8px 14px rgba(0, 0, 0, 0.03);
+}
+
+.footer-container {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-btn button {
+    padding: 10px 25px;
+    border-radius: 6px;
+    border: 1px solid #2C3341;
+    background-color: transparent;
+    font-weight: 600;
+}
+
+
+.invalid input {
+    border-color: #d93025;
+  }

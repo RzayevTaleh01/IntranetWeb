@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/reset.css" />
+    <link rel="stylesheet" href="./assets/style.css" />
+    <title>İntranet Web</title>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <div class="header-logo">
+                <a href="#"><img src="./img/logo.svg" alt="" /> </a>
+            </div>
+            <div class="header-info">
+                <div class="profile-data">
+                    <div class="profile-info">
+                        <h3>Vüsal Rza</h3>
+                        <p>Məlumat Hesablama Mərkəzi</p>
+                    </div>
+                    <div class="profile-img">
+                        <img src="./img/Profile.png" alt="" />
+                    </div>
+                </div>
+
+                <div class="logout">
+                    <a href="#">
+                        <img src="./img/Logout.svg" alt="" />
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <nav>
+        <ul class="nav-links">
+            <li class="nav-item"><a href="#"><img src="./img/icon/Home.svg" alt=""></a></li>
+            <li class="nav-item active"><a href="#"><img src="./img/icon/3 User.svg" alt=""></a></li>
+            <li class="nav-item"><a href="#"><img src="./img/icon/Folder.svg" alt=""></a></li>
+            <li class="nav-item"><a href="#"><img src="./img/icon/code.svg" alt=""></a></li>
+            <li class="nav-item"><a href="#"><img src="./img/icon/Combined-Shape.svg" alt=""></a></li>
+            <li class="nav-item"><a href="#"><img src="./img/icon/Setting.svg" alt=""></a></li>
+        </ul>
+    </nav>
+    <main>
+        <section class="user-profile">
+            <h1>Əsas məlumatlar</h1>
+            <article class="user-profile-header">
+                <div class="user-image"><img src="./img/Default-PP.png" alt=""></div>
+                <div class="user-data">
+                    <div class="user-data-col">
+                        <div>
+                            <p>Ad</p>
+                            <h3>Məlik</h3>
+                        </div>
+                        <div>
+                            <p>
+                                Ş.V. seriyası və nömrəsi
+                            </p>
+                            <h3>AA1234567</h3>
+                        </div>
+                        <div>
+                            <p>Cinsi</p>
+                            <h3>Kişi</h3>
+                        </div>
+                    </div>
+                    <div class="user-data-col">
+                        <div>
+                            <p>Soyad</p>
+                            <h3>Məmmədov</h3>
+                        </div>
+                        <div>
+                            <p>
+                                FİN kod
+                            </p>
+                            <h3>432AB10</h3>
+                        </div>
+                        <div>
+                            <p>Vətəndaşlığı</p>
+                            <h3>Azərbaycanlı</h3>
+                        </div>
+                    </div>
+                    <div class="user-data-col">
+                        <div>
+                            <p>Ata adı</p>
+                            <h3>Alı oğlu</h3>
+                        </div>
+                        <div>
+                            <p>
+                                Doğum tarixi
+                            </p>
+                            <h3>04.12.1989</h3>
+                        </div>
+                        <div>
+                            <p>Doğum yeri</p>
+                            <h3>Azərbaycan, Bakı ş., Sabunçu r.</h3>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="user-profile-body">
+                <h1>Pozisiya məlumatları</h1>
+                <form action="#">
+                    <label for="select-position">Struktur</label>
+                    <input id="select-position" type="button" value="Seç">
+                    <label for="select-duty">Vəzifə</label>
+                    <div class="select-box">
+                        <div class="options-container">
+                            <div class="option">
+                                <input type="radio" class="radio" name="duty" />
+                                <label>Sektor müdiri</label>
+                            </div>
+                        </div>
+                        <div class="selected">
+                            Seç
+                        </div>
+                        <button class="form-submit"><img src="./img/icon/Plus.svg" alt=""> Əlavə Et </button>
+                </form>
+            </article>
+            <article class="user-profile-footer">
+                <h1>Digər məlumatlar</h1>
+                <form action="#" class="other-info">
+                    <div class="form-row">
+                        <div class="input-fields">
+                            <div>
+                                <label for="">Telefon (daxili)</label>
+                                <input type="text" name="" id="">
+                            </div>
+                            <div>
+                                <label for="">Telefon</label>
+                                <input type="text" name="" id="">
+                            </div>
+                        </div>
+                        <div>
+                            <button class="add-phone-field"><img src="./img/icon/Plus.svg" alt=""></button>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="input-fields">
+                            <div class="email-field">
+                                <label for="">E-mail (korporativ)</label>
+                                <input type="email" name="" id="">
+                            </div>
+                            <div class="email-field">
+                                <label for="">E-mail</label>
+                                <input class="email" type="text" name="" id="">
+                            </div>
+                        </div>
+
+                        <div>
+                            <button class="add-email-field"><img src="./img/icon/Plus.svg" alt=""></button>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="input-fields">
+                            <div>
+                                <label for="">Yerləşmə (Korpus,Otaq və s.)</label>
+                                <input type="text" name="" id="">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </article>
+        </section>
+        <footer>
+            <div class="footer-container">
+                <p>Yeni əməkdaşı sistemə daxil etmək üçün ən azı <strong>strukturunu</strong> və
+                    <strong>vəzifəsini</strong> daxil edib <strong>yadda saxlayın.</strong>
+                </p>
+                <div class="footer-btn">
+                    <button>İmtina</button>
+                    <button disabled>Yadda Saxla</button>
+                </div>
+
+            </div>
+        </footer>
+    </main>
+    <script src="./assets/js/select.js"></script>
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
